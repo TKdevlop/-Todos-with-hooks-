@@ -12,3 +12,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@keyframes slide {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fade-enter {
+  transform: translateX(-100vw);
+}
+
+.fade-enter-active {
+  animation: slide 0.5s forwards;
+}
+
+.fade-exit {
+}
+
+.fade-exit-active {
+  transform: scale(0);
+  transition: transform 0.5s ease-out;
+}
